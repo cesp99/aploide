@@ -33,6 +33,17 @@ main {
     color: whitesmoke;
 }
 
+a:hover {
+    color: #b25ff7;
+}
+
+a {
+    color: #4ae24a;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+
 .a-terattivo h1 {
     letter-spacing: -1.2em;
 }
@@ -65,14 +76,7 @@ main {
 }
 
 .i-terattivo a {
-    color: #4ae24a;
-    text-decoration: none;
     font-size: 1.2rem;
-    transition: color 0.3s ease-in-out;
-}
-
-.i-terattivo a:hover {
-    color: #b25ff7;
 }
 
 .i-terattivo ul {
@@ -117,16 +121,6 @@ footer {
 
 .spacermini {
     margin: 2em 0;
-}
-
-.terattivo a {
-    color: #4ae24a;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-.terattivo a:hover {
-    color: #b25ff7;
 }
 
 .terattivo h1,

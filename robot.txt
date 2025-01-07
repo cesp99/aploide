@@ -1,5 +1,7 @@
 User-agent: *
 Disallow: /assets/
+Disallow: /eyed/assets/
+Disallow: /eyed-pass/assets/
 Allow: /assets/img/*.og.jpg
 Allow: /favicon.ico
 

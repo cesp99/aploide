@@ -23,6 +23,7 @@
     background: var(--bright-accent);
 }
 
+
 html {
     background-color: var(--bg-color);
     scroll-behavior: smooth;
@@ -43,7 +44,7 @@ body {
     height: 83vh;
     padding-top: 17vh;
 
-    background-image: url("/assets/img/eyed-ovrl.svg");
+    background-image: url("/eyed/assets/img/eyed-ovrl.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -305,6 +306,14 @@ footer img{
     font-family: 'Mdm';
     font-size: clamp(16px, 2vw, 20px);
     color: white;
+
+    transition: 250ms;
+}
+
+.l-links a:hover{
+    color: var(--bright-accent);
+
+    transition: 250ms;
 }
 
 .copyright{
