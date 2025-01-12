@@ -1,37 +1,65 @@
 /* For Text Only pages */
 
 body {
-    background-color: #333333;
+    font-family: 'Reg';
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-.bianco {
-    color: whitesmoke;
+h1 {
+    color: #bb86fc;
+    border-bottom: 2px solid #bb86fc;
+    padding-bottom: 10px;
+    margin-top: 20px;
 }
 
-.spacer {
-    margin: 5em 0;
+ol {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    counter-reset: item;
 }
 
-.spacermini {
-    margin: 2em 0;
-}
-
-.terattivo a {
-    color: #4ae24a;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-.terattivo a:hover {
-    color: #b25ff7;
-}
-
-.terattivo h1,
-h2 {
-    font-family: 'SBld';
-}
-
-.terattivo p,
 li {
-    font-family: 'Mdm';
+    margin-bottom: 20px;
+    position: relative;
+    counter-increment: item;
+    list-style: none;
+}
+
+ol > li::before {
+    content: " ";
+    position: absolute;
+    left: -20px;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    background-color: #03dac6;
+    border-radius: 50%;
+}
+
+a {
+    color: #03dac6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #bb86fc;
+    text-decoration: underline;
+}
+
+.section {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

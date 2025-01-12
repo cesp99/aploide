@@ -15,13 +15,15 @@
     <!-- CSS Styling -->
     <link rel="stylesheet" href="/assets/css/fonts.css" media="all" onload="this.media='all'">
     <link rel="stylesheet" href="./assets/css/style.css" media="all" onload="this.media='all'">
+    <link rel="stylesheet" href="/assets/css/footer.css" media="all" onload="this.media='all'">
 
 
     <!-- Main metadata -->
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eyed Pass - Private Vault.</title>
-    <meta name="description" content="A privacy-first offline password manager that ensures your sensitive informationstays secure.">
+    <meta name="description"
+        content="A privacy-first offline password manager that ensures your sensitive informationstays secure.">
     <meta name="author" content="Aploide, Carlo Esposito">
     <link rel="canonical" href="https://aploi.de/eyed-pass/">
     <link rel="shortcut icon" href="./favicon.ico" type="image/png">
@@ -29,7 +31,8 @@
     <meta property="og:url" content="https://aploi.de/eyed-pass">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Eyed Pass - Private Vault.">
-    <meta property="og:description" content="A privacy-first offline password manager that ensures your sensitive informationstays secure.">
+    <meta property="og:description"
+        content="A privacy-first offline password manager that ensures your sensitive informationstays secure.">
     <meta property="og:image" content="/assets/img/eyed-pass.og.jpg">
     <meta property="og:image:alt" content="Eyed Pass Website">
     <meta property="og:locale" content="en_US">
@@ -110,11 +113,16 @@
                 <a href="https://github.com/aploide">GitHub</a>
             </div>
             <div class="copyright">
-                <p>© 2024 <strong>Eyed<sup>™</sup></strong> by Aploide | All rights reserved.</p>
+                <p>© <span id="current-year"></span> <strong>Eyed<sup>™</sup></strong> by Aploide | All rights reserved.
+                </p>
             </div>
         </footer>
 
     </main>
+    <script>
+        // Current year Copyright
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
