@@ -1,0 +1,233 @@
+/* Eyed — product pages. Loaded after home.css; adds the pieces
+   product pages need: feature index, FAQ, downloads, app icon. */
+
+/* product hero */
+
+.hero-product {
+    padding: 88px 0 72px;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.hero-product .lede {
+    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+    color: var(--dim);
+    max-width: 32em;
+    margin-bottom: 36px;
+}
+
+.hero-product .lede strong {
+    font-family: 'SBld';
+    font-weight: normal;
+    color: var(--paper);
+}
+
+.hero-product h1 {
+    font-family: 'XBld';
+    font-size: clamp(2.4rem, 5.4vw, 4.2rem);
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    max-width: 14em;
+}
+
+.platform-note {
+    font-size: 13px;
+    color: var(--dim);
+    margin-top: 16px;
+}
+
+/* app icon (Eyed Pass) */
+
+.app-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    margin-bottom: 28px;
+    border: 1px solid var(--line);
+}
+
+/* feature index — same list grammar as the homepage products */
+
+.feature-list {
+    list-style: none;
+    border-top: 1px solid var(--line);
+}
+
+.feature-list li {
+    display: grid;
+    grid-template-columns: 56px 240px minmax(0, 1fr);
+    align-items: center;
+    gap: 24px;
+    padding: 22px 8px;
+    border-bottom: 1px solid var(--line);
+}
+
+.feature-list li.no-icon {
+    grid-template-columns: 240px minmax(0, 1fr);
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    opacity: 0.85;
+}
+
+.feature-name {
+    font-family: 'SBld';
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+}
+
+.feature-name small {
+    display: block;
+    font-family: 'Mdm';
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-top: 4px;
+}
+
+.feature-desc {
+    color: var(--dim);
+    font-size: 15px;
+    max-width: 36em;
+}
+
+.feature-desc b {
+    font-family: 'SBld';
+    font-weight: normal;
+    color: var(--paper);
+}
+
+/* sections */
+
+.page-section {
+    padding: 72px 0;
+}
+
+.page-section + .page-section {
+    border-top: 1px solid var(--line);
+}
+
+/* FAQ */
+
+.faq details {
+    border-bottom: 1px solid var(--line);
+}
+
+.faq details:first-of-type {
+    border-top: 1px solid var(--line);
+}
+
+.faq summary {
+    font-family: 'SBld';
+    font-size: 1.05rem;
+    padding: 20px 32px 20px 8px;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    transition: color 0.2s;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: '+';
+    font-family: 'Lig';
+    font-size: 1.4rem;
+    color: var(--dim);
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.faq details[open] summary::after {
+    content: '−';
+}
+
+.faq summary:hover {
+    color: var(--accent);
+}
+
+.faq details p {
+    color: var(--dim);
+    font-size: 15px;
+    max-width: 46em;
+    padding: 0 8px 24px;
+}
+
+.faq details a {
+    color: var(--paper);
+    text-decoration-color: var(--accent);
+}
+
+.faq details b {
+    font-family: 'SBld';
+    font-weight: normal;
+    color: var(--paper);
+}
+
+/* downloads */
+
+.download-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.download-list .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.download-list .btn img {
+    height: 18px;
+    width: auto;
+    display: block;
+    /* store icons are white; the pill background is ivory */
+    filter: invert(1);
+}
+
+/* closing CTA */
+
+.closing {
+    padding: 96px 0;
+    border-top: 1px solid var(--line);
+    text-align: center;
+}
+
+.closing h2 {
+    font-family: 'XBld';
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 28px;
+}
+
+.closing .platform-note {
+    margin-top: 18px;
+}
+
+/* responsive */
+
+@media (max-width: 860px) {
+    .hero-product {
+        padding: 56px 0 48px;
+    }
+
+    .feature-list li,
+    .feature-list li.no-icon {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .feature-icon {
+        margin-bottom: 2px;
+    }
+}

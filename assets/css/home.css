@@ -1,0 +1,442 @@
+/* Eyed — homepage. Ivory on warm charcoal, everywhere — the eye included. */
+
+:root {
+    --ink: #141216;
+    --ink-2: #191619;
+    --paper: #EAE5DA;
+    --dim: #8F897C;
+    --line: #2B272E;
+    --accent: #8FAE9F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: var(--paper);
+    color: var(--ink);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Reg', system-ui, sans-serif;
+    background: var(--ink);
+    color: var(--paper);
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+}
+
+.wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ---------- nav ---------- */
+
+nav {
+    border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 22px 0;
+}
+
+.wordmark {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.wordmark img {
+    display: block;
+    height: 26px;
+    width: auto;
+}
+
+.wordmark small {
+    font-family: 'Reg';
+    font-size: 12px;
+    color: var(--dim);
+    letter-spacing: 0.02em;
+    margin-left: 12px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-family: 'Mdm';
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--dim);
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    color: var(--paper);
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 48px;
+    padding: 96px 0 80px;
+}
+
+.eyebrow {
+    font-family: 'Mdm';
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'XBld';
+    font-size: clamp(2.6rem, 6vw, 4.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    margin-bottom: 26px;
+}
+
+.hero .lede {
+    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+    color: var(--dim);
+    max-width: 30em;
+    margin-bottom: 36px;
+}
+
+.hero .lede strong {
+    font-family: 'SBld';
+    font-weight: normal;
+    color: var(--paper);
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    font-family: 'SBld';
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--paper);
+    padding: 13px 26px;
+    border-radius: 999px;
+    transition: background 0.2s;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: var(--accent);
+}
+
+.quiet-link {
+    font-family: 'Mdm';
+    font-size: 14px;
+    color: var(--dim);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.quiet-link:hover,
+.quiet-link:focus-visible {
+    color: var(--paper);
+    border-color: var(--accent);
+}
+
+/* ---------- the eye ---------- */
+
+.eye-figure {
+    text-align: center;
+    user-select: none;
+}
+
+.eye-svg {
+    width: min(300px, 70vw);
+    height: auto;
+    display: block;
+    margin: 0 auto 14px;
+    cursor: pointer;
+}
+
+/* The eye shuts only when you point at it: the drawing squashes vertically
+   and fades while a crisp closed-lid line fades in over it. */
+
+.eye-all {
+    transform-box: view-box;
+    transform-origin: 50% 50%;
+    transition: transform 0.15s ease-out, opacity 0.12s ease-out;
+}
+
+.eye-lid {
+    opacity: 0;
+    transition: opacity 0.12s ease-out;
+}
+
+.eye-svg:hover .eye-all {
+    transform: scaleY(0.1);
+    opacity: 0;
+}
+
+.eye-svg:hover .eye-lid {
+    opacity: 1;
+}
+
+.eye-iris {
+    transition: transform 0.25s ease-out;
+}
+
+.eye-caption {
+    font-size: 13px;
+    color: var(--dim);
+    max-width: 22em;
+    margin: 0 auto;
+}
+
+/* ---------- manifesto pull quote ---------- */
+
+.manifesto-quote {
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 64px 0;
+}
+
+.manifesto-quote blockquote {
+    font-family: 'Lig';
+    font-size: clamp(1.5rem, 3.4vw, 2.4rem);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    max-width: 22em;
+}
+
+.manifesto-quote blockquote em {
+    font-family: 'SBld';
+    font-style: normal;
+}
+
+.manifesto-quote .quiet-link {
+    display: inline-block;
+    margin-top: 24px;
+}
+
+/* ---------- products index ---------- */
+
+.products {
+    padding: 80px 0 40px;
+}
+
+.section-label {
+    font-family: 'Mdm';
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-bottom: 8px;
+}
+
+.products > .wrap > p {
+    color: var(--dim);
+    max-width: 36em;
+    margin-bottom: 40px;
+}
+
+.product-list {
+    list-style: none;
+    border-top: 1px solid var(--line);
+}
+
+.product-list a {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr) auto;
+    align-items: baseline;
+    gap: 24px;
+    padding: 26px 8px;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.product-list a:hover,
+.product-list a:focus-visible {
+    background: var(--ink-2);
+}
+
+.product-name {
+    font-family: 'SBld';
+    font-size: 1.25rem;
+    letter-spacing: -0.01em;
+}
+
+.product-desc {
+    color: var(--dim);
+    font-size: 15px;
+    max-width: 34em;
+}
+
+.product-list a:hover .product-desc {
+    color: var(--paper);
+}
+
+.product-where {
+    font-family: 'Mdm';
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--dim);
+    white-space: nowrap;
+}
+
+.product-list a:hover .product-where {
+    color: var(--accent);
+}
+
+/* ---------- house rules ---------- */
+
+.rules {
+    padding: 40px 0 96px;
+}
+
+.rules ul {
+    list-style: none;
+    max-width: 40em;
+}
+
+.rules li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--dim);
+}
+
+.rules li strong {
+    font-family: 'SBld';
+    font-weight: normal;
+    color: var(--paper);
+    margin-right: 8px;
+}
+
+/* ---------- footer ---------- */
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 48px 0 40px;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-note {
+    color: var(--dim);
+    font-size: 14px;
+    max-width: 40em;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-links a {
+    font-family: 'Mdm';
+    font-size: 13px;
+    color: var(--dim);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    color: var(--paper);
+}
+
+.copyright {
+    font-size: 13px;
+    color: var(--dim);
+}
+
+/* ---------- a11y & motion ---------- */
+
+a:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .eye-iris { transition: none; }
+    * { transition: none !important; }
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 860px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 64px 0 56px;
+    }
+
+    .eye-figure {
+        order: -1;
+        text-align: left;
+    }
+
+    .eye-svg {
+        margin: 0 0 12px;
+        width: min(220px, 60vw);
+    }
+
+    .eye-caption {
+        margin: 0;
+    }
+
+    .product-list a {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .product-where {
+        white-space: normal;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .wordmark small {
+        display: none;
+    }
+}

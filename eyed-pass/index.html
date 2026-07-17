@@ -1,128 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Image preload -->
-    <link rel="preload" href="./assets/img/applogo.png" media="all" onload="this.media='all'">
-
-    <!-- Font preload -->
+    <!-- Fonts preload -->
     <link rel="preload" href="/assets/font/Reg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/font/SBld.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="/assets/font/Mdm.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/font/XBld.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
     <!-- CSS Styling -->
-    <link rel="stylesheet" href="/assets/css/fonts.css" media="all" onload="this.media='all'">
-    <link rel="stylesheet" href="./assets/css/style.css" media="all" onload="this.media='all'">
-    <link rel="stylesheet" href="/assets/css/footer.css" media="all" onload="this.media='all'">
-
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/page.css">
 
     <!-- Main metadata -->
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eyed Pass - Private Vault.</title>
-    <meta name="description"
-        content="A privacy-first offline password manager that ensures your sensitive informationstays secure.">
-    <meta name="author" content="Aploide, Carlo Esposito">
+    <title>Eyed Pass — The Offline Vault</title>
+    <meta name="description" content="A privacy-first offline password manager that keeps your passwords, 2FA codes and sensitive information on your device — never in a cloud.">
+    <meta name="author" content="Eyed, Carlo Esposito">
     <link rel="canonical" href="https://aploi.de/eyed-pass/">
     <link rel="shortcut icon" href="./favicon.ico" type="image/png">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <meta property="og:url" content="https://aploi.de/eyed-pass">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Eyed Pass - Private Vault.">
-    <meta property="og:description"
-        content="A privacy-first offline password manager that ensures your sensitive informationstays secure.">
+    <meta property="og:title" content="Eyed Pass — The Offline Vault">
+    <meta property="og:description" content="A privacy-first offline password manager that keeps your passwords, 2FA codes and sensitive information on your device — never in a cloud.">
     <meta property="og:image" content="/assets/img/eyed-pass.og.jpg">
     <meta property="og:image:alt" content="Eyed Pass Website">
     <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="Eyed Pass - Private Vault.">
-
+    <meta property="og:site_name" content="Eyed Pass — The Offline Vault">
 </head>
-
 <body>
-    <main>
-        <section class="hero">
-            <div class="app-icon">
-                <div class="icon-glow"></div>
-                <img src="./assets/img/applogo.png" alt="Eyed Pass Icon" width="150px" height="150px">
-            </div>
 
-            <h1>Eyed Pass</h1>
-            <p class="tagline">Your privacy, reimagined.</p>
-            <p class="description">A privacy-first offline password manager that ensures your sensitive information
-                stays secure.</p>
-
-            <div class="download-buttons">
-                <a href="https://play.google.com/store/apps/details?id=de.aploi.eyedpass" class="button">
-                    <img src="./assets/img/android.svg" alt="Android Icon" width="30px" height="20px">
-                    <span class="text">Download on Android</span>
-                </a>
-                <a href="https://apps.apple.com/app/id6740422484" class="button">
-                    <img src="./assets/img/apple.svg" alt="Apple Icon" width="30px" height="20px">
-                    <span class="text">Download on iOS</span>
-                    <span class="overlay">Coming Soon</span>
-                </a>
-                <a href="" class="button coming-soon">
-                    <span class="icon">&#x2193;</span>
-                    <span class="text">Download on Windows, MacOS and Linux</span>
-                    <span class="overlay">Coming Soon</span>
-                </a>
-            </div>
-
-        </section>
-
-        <section class="features">
-            <div class="feature">
-                <div class="feature-icon">🔒</div>
-                <h3>Strong Encryption</h3>
-                <p>Store your passwords, 2FA codes, and other credentials with confidence. Eyed Pass uses a powerful
-                    cipher to keep your data safe and private.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🌐</div>
-                <h3>No Cloud, Just Privacy</h3>
-                <p>Unlike many other password managers, Eyed Pass doesn't rely on cloud storage. Your data stays
-                    entirely offline, giving you full control and peace of mind.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">📱</div>
-                <h3>Sleek & Intuitive Design</h3>
-                <p>Built with Google Material Design 3, Eyed Pass is easy to use and looks great on any device.</p>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">📂</div>
-                <h3>Easy Import/Export</h3>
-                <p>Import and export passwords effortlessly with the widely-used .csv format, ensuring you can manage
-                    your data your way.</p>
-            </div>
-        </section>
-
-        <section class="CTA">
-            <p>With Eyed Pass, your privacy is our priority. Take control of your digital security today and keep your
-                passwords, codes, and sensitive information secure—offline and under your control.</p>
-            <p class="emphasis">Download now and experience the safest way to manage your passwords!</p>
-        </section>
-
-        <footer>
-            <a href="https://aploi.de"><img src="/assets/img/logos.svg" alt="Eyed and Aploide Logos"></a>
-            <div class="l-links">
+    <nav>
+        <div class="wrap nav-inner">
+            <a href="/" class="wordmark">
+                <img src="/assets/img/Logo.svg" alt="Eyed" height="26">
+                <small>Eyed Pass</small>
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#download">Download</a>
                 <a href="mailto:yo@aploi.de">Support</a>
-                <a href="https://aploi.de/eyed-TOS">Terms of Use</a>
-                <a href="https://aploi.de/privacy">Privacy Policy</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-product wrap">
+        <img class="app-icon" src="./assets/img/applogo.png" alt="Eyed Pass app icon" width="96" height="96">
+        <p class="eyebrow">The offline vault</p>
+        <h1>Passwords that never leave home.</h1>
+        <p class="lede">
+            Eyed Pass keeps your passwords, 2FA codes and credentials
+            <strong>encrypted on your device</strong> — no cloud, no account,
+            no sync servers. If it isn't online, it can't be breached online.
+        </p>
+        <div class="hero-actions" id="download">
+            <div class="download-list">
+                <a href="https://play.google.com/store/apps/details?id=de.aploi.eyedpass" class="btn">
+                    <img src="./assets/img/android.svg" alt="">
+                    Get it on Android
+                </a>
+                <a href="https://apps.apple.com/app/id6740422484" class="btn">
+                    <img src="./assets/img/apple.svg" alt="">
+                    Get it on iOS
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-section" id="features">
+        <div class="wrap">
+            <p class="section-label">Features</p>
+            <ul class="feature-list">
+                <li class="no-icon">
+                    <span class="feature-name">Strong encryption</span>
+                    <span class="feature-desc">Passwords, 2FA codes and credentials are protected by a <b>powerful cipher</b> — unreadable to anyone but you.</span>
+                </li>
+                <li class="no-icon">
+                    <span class="feature-name">No cloud, just privacy</span>
+                    <span class="feature-desc">Your vault lives <b>entirely offline</b>. Nothing to sync means nothing to intercept, subpoena or leak.</span>
+                </li>
+                <li class="no-icon">
+                    <span class="feature-name">Sleek, intuitive design</span>
+                    <span class="feature-desc">Built with Material Design 3 — easy to use and at home on any device.</span>
+                </li>
+                <li class="no-icon">
+                    <span class="feature-name">Easy import &amp; export</span>
+                    <span class="feature-desc">Move your data in and out with plain <b>.csv</b> files. Your passwords are yours, including the freedom to walk away.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="closing">
+        <div class="wrap">
+            <h2>Your keys, kept in your pocket.<br>Not in someone's cloud.</h2>
+            <div class="download-list" style="justify-content: center;">
+                <a href="https://play.google.com/store/apps/details?id=de.aploi.eyedpass" class="btn">
+                    <img src="./assets/img/android.svg" alt="">
+                    Get it on Android
+                </a>
+                <a href="https://apps.apple.com/app/id6740422484" class="btn">
+                    <img src="./assets/img/apple.svg" alt="">
+                    Get it on iOS
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap footer-inner">
+            <div class="footer-links">
+                <a href="https://aploi.de">Eyed</a>
+                <a href="mailto:yo@aploi.de">Support</a>
+                <a href="/eyed-TOS/">Terms of Use</a>
+                <a href="/privacy/">Privacy Policy</a>
                 <a href="https://github.com/aploide">GitHub</a>
             </div>
-            <div class="copyright">
-                <p>© <span id="current-year"></span> <strong>Eyed<sup>™</sup></strong> by Aploide | All rights reserved.
-                </p>
-            </div>
-        </footer>
+            <p class="copyright">© <span id="current-year"></span> <strong>Eyed<sup>™</sup></strong> — All rights reserved.</p>
+        </div>
+    </footer>
 
-    </main>
     <script>
-        // Current year Copyright
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
-
 </html>

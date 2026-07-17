@@ -13,7 +13,8 @@ footer{
 }
 
 footer img{
-    width: clamp(270px, 10vw, 430px);
+    height: clamp(44px, 5vw, 64px);
+    width: auto;
 }
 
 .l-links{
