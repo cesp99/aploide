@@ -4,7 +4,7 @@
 /* product hero */
 
 .hero-product {
-    padding: 88px 0 72px;
+    padding-block: 88px 72px;
     max-width: 1040px;
     margin: 0 auto;
 }
@@ -218,7 +218,7 @@
 
 @media (max-width: 860px) {
     .hero-product {
-        padding: 56px 0 48px;
+        padding-block: 56px 48px;
     }
 
     .feature-list li,

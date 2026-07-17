@@ -53,7 +53,7 @@ nav {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    padding: 22px 0;
+    padding-block: 22px;
 }
 
 .wordmark {
@@ -103,7 +103,7 @@ nav {
     grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 48px;
-    padding: 96px 0 80px;
+    padding-block: 96px 80px;
 }
 
 .eyebrow {
@@ -406,7 +406,7 @@ a:focus-visible,
 @media (max-width: 860px) {
     .hero {
         grid-template-columns: 1fr;
-        padding: 64px 0 56px;
+        padding-block: 64px 56px;
     }
 
     .eye-figure {
@@ -438,5 +438,24 @@ a:focus-visible,
 
     .wordmark small {
         display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-inner {
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 10px;
+        padding-block: 16px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 8px 16px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        letter-spacing: 0.06em;
     }
 }

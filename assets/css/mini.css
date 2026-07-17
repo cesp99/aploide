@@ -1,97 +1,188 @@
-/* CSS-Only Dynamic Theme - Responds to System Theme */
+/* Eyed — text pages (manifesto, terms, privacy).
+   Same palette and type system as the main site (home.css). */
 
-/* Base Styles - Light Theme Default */
+:root {
+    --ink: #141216;
+    --ink-2: #191619;
+    --paper: #EAE5DA;
+    --dim: #8F897C;
+    --line: #2B272E;
+    --accent: #8FAE9F;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background: var(--paper);
+    color: var(--ink);
+}
+
 body {
-    font-family: 'Reg', sans-serif;
-    line-height: 1.6;
+    font-family: 'Reg', system-ui, sans-serif;
+    background: var(--ink);
+    color: var(--paper);
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #333333;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 720px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 72px 24px 96px;
 }
+
+/* ---------- headings ---------- */
 
 h1 {
-    color: #6c5ce7;
-    border-bottom: 2px solid #6c5ce7;
-    padding-bottom: 10px;
-    margin-top: 20px;
+    font-family: 'XBld', 'Reg', sans-serif;
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 14px;
+    margin: 56px 0 20px;
 }
 
-ol {
-    margin-bottom: 30px;
+.container > h1:first-child {
+    margin-top: 0;
+    font-size: clamp(2.2rem, 6vw, 3.2rem);
+    letter-spacing: -0.03em;
+}
+
+h2 {
+    font-family: 'SBld', 'Reg', sans-serif;
+    font-size: clamp(1.3rem, 3vw, 1.6rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 48px 0 16px;
+}
+
+/* ---------- text ---------- */
+
+p {
+    margin: 0 0 18px;
+    color: var(--dim);
+}
+
+p strong,
+li strong,
+p b,
+li b {
+    font-family: 'SBld', 'Reg', sans-serif;
+    font-weight: normal;
+    color: var(--paper);
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 44px 0;
+}
+
+/* headings already draw their own rule */
+hr + h1,
+hr + h2 {
+    margin-top: 0;
+}
+
+hr:has(+ h1),
+hr:has(+ h2) {
+    display: none;
+}
+
+/* ---------- lists ---------- */
+
+ol,
+ul {
+    margin: 0 0 28px;
     padding-left: 20px;
-    counter-reset: item;
 }
 
 li {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     position: relative;
-    counter-increment: item;
     list-style: none;
+    color: var(--dim);
 }
 
-ol > li::before {
+ol > li::before,
+ul > li::before {
     content: "";
     position: absolute;
     left: -20px;
-    top: 10px;
-    width: 6px;
-    height: 6px;
-    background-color: #00b894;
+    top: 0.65em;
+    width: 5px;
+    height: 5px;
+    background-color: var(--accent);
     border-radius: 50%;
 }
 
+/* ---------- links ---------- */
+
 a {
-    color: #00b894;
-    text-decoration: none;
-    transition: color 0.3s ease;
+    color: var(--paper);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 3px;
+    transition: color 0.2s;
 }
 
-a:hover {
-    color: #6c5ce7;
-    text-decoration: underline;
+a:hover,
+a:focus-visible {
+    color: var(--accent);
 }
+
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* ---------- section cards (terms & privacy) ---------- */
 
 .section {
-    background-color: #f8f9fa;
+    background-color: var(--ink-2);
+    border: 1px solid var(--line);
     border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 24px 28px;
+    margin-bottom: 28px;
 }
 
-/* Dark Theme - Activated by System Preference */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #121212;
-        color: #e0e0e0;
-    }
-    
-    h1 {
-        color: #bb86fc;
-        border-bottom-color: #bb86fc;
-    }
-    
-    ol > li::before {
-        background-color: #03dac6;
-    }
-    
-    a {
-        color: #03dac6;
-    }
-    
-    a:hover {
-        color: #bb86fc;
-    }
-    
-    .section {
-        background-color: #1e1e1e;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+.section h1 {
+    margin-top: 0;
+    font-size: clamp(1.2rem, 2.6vw, 1.45rem);
+    letter-spacing: -0.01em;
+}
+
+.section > :last-child {
+    margin-bottom: 0;
+}
+
+/* a card holding only the page title renders as a plain title */
+.section:has(> h1:only-child) {
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.section:has(> h1:only-child) h1 {
+    font-size: clamp(2.2rem, 6vw, 3.2rem);
+    letter-spacing: -0.03em;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* ---------- motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
     }
 }
