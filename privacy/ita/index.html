@@ -18,10 +18,13 @@
     <div class="section">
         <h1>Introduzione</h1>
         <p>Il presente documento illustra come le nostre applicazioni trattano i dati e definisce il nostro impegno in
-            materia di protezione della privacy degli utenti. Sebbene le nostre applicazioni siano progettate per non
-            conservare dati personali, forniamo la presente informativa al fine di garantire trasparenza e fiducia.</p>
+            materia di protezione della privacy degli utenti. Le nostre applicazioni sono progettate per raccogliere
+            il minimo indispensabile di dati necessario al funzionamento; forniamo la presente informativa per garantire
+            trasparenza e fiducia.</p>
 
-        <p>Il titolare del trattamento dei dati è: <b>Carlo Esposito</b>.</p>
+        <p>Il titolare del trattamento dei dati è: <b>Carlo Esposito</b>, che opera tramite Eyed® Softwares ("Eyed®", "Eyed™", "noi", "ci", "nostro").
+            Per qualsiasi richiesta relativa alla privacy
+            puoi scrivere a <a href="mailto:privacy@aploi.de">privacy@aploi.de</a>.</p>
     </div>
 
     <div class="section">
@@ -29,13 +32,19 @@
         <p><b>Dati Personali:</b> Informazioni che possono essere utilizzate per identificare una persona.</p>
         <p><b>Applicazione Offline:</b> Software che opera senza richiedere una connessione internet continua.</p>
         <p><b>API di Terze Parti:</b> Servizi esterni impiegati per migliorare le funzionalità dell'app (ad es., per il
-            caricamento delle icone dei siti web).</p>
+            caricamento delle icone dei siti web o per l'inoltro delle richieste LLM).</p>
+        <p><b>CLI:</b> l'assistente di coding multi-agent basato su terminale di Spettro, distribuito sotto licenza
+            open-source GPL-3.0.</p>
+        <p><b>Backend:</b> il nostro servizio di inferenza LLM gestito da Eyed® Softwares.</p>
+        <p><b>Spettro-Desktop:</b> l'applicazione desktop per Linux e Windows, distribuita da Eyed®.</p>
+        <p><b>Spettro for macOS:</b> l'applicazione desktop nativa per macOS, costruita interamente in Swift e SwiftUI,
+            distribuita da Eyed®.</p>
     </div>
 
     <div class="section">
         <h1>Ambito e Dichiarazione sul Trattamento dei Dati</h1>
-        <p>Le nostre applicazioni Eyed non conservano alcun dato personale degli utenti. Le seguenti applicazioni sono
-            comprese nell'ambito della presente informativa:</p>
+        <p>Le nostre applicazioni Eyed sono progettate attorno al principio di minimizzazione dei dati. Le seguenti
+            applicazioni e servizi rientrano nella presente informativa:</p>
         <ol>
             <li>Eyed Search</li>
             <li>Eyed Out</li>
@@ -44,25 +53,30 @@
             <li>Dark by Eyed™</li>
             <li>Dither by Eyed™</li>
             <li>Inferno by Eyed™</li>
-            <li>Spettro by Eyed™</li>
+            <li>Spettro by Eyed™ — inclusi la CLI di Spettro, il Backend di Spettro, l'applicazione web su
+                <code>spettro.app</code>, Spettro-Desktop e Spettro for macOS</li>
         </ol>
-
     </div>
 
     <div class="section">
         <h1>Dati Temporanei o Incidentali</h1>
         <p>Sebbene le nostre applicazioni possano elaborare dati temporaneamente durante l'uso attivo (ad esempio, dati
-            di sessione in memoria), nessun dato viene conservato, registrato o trasmesso oltre quanto strettamente
-            necessario per il corretto funzionamento.</p>
+            di sessione in memoria o sessioni di autenticazione in attesa), nessun dato viene conservato oltre quanto
+            strettamente necessario per il corretto funzionamento.</p>
     </div>
 
     <div class="section">
-        <h1>Cookies e Tecnologie di Tracciamento</h1>
+        <h1>Cookie e Tecnologie di Tracciamento</h1>
         <p>Le nostre applicazioni sono progettate nel rispetto della privacy:</p>
         <ol>
-            <li><b>Uso Generale:</b> Non vengono impiegati cookies persistenti o meccanismi di tracciamento.</li>
+            <li><b>Uso Generale:</b> Nessun cookie persistente, identificatore pubblicitario, fingerprinting o
+                analytics di terze parti viene utilizzato in alcuna delle nostre applicazioni, inclusi tutti i
+                componenti di Spettro.</li>
             <li><b>Eyed Pass:</b> Questa applicazione utilizza internet esclusivamente per caricare le icone dei siti
                 web e <b>non</b> impiega tecnologie di tracciamento per monitorare il comportamento degli utenti.</li>
+            <li><b>spettro.app (web):</b> Utilizza Clerk per l'autenticazione. I cookie impostati da Clerk sono
+                funzionali (sessione di accesso) e sono disciplinati dall'informativa sulla privacy di Clerk; ti
+                invitiamo a consultarla per le categorie coinvolte.</li>
         </ol>
     </div>
 
@@ -79,8 +93,9 @@
                 href="https://webkit.org/blog/category/privacy/">qui</a>.</p>
 
         <p><b>API di Terze Parti:</b></p>
-        <p>Sebbene "Eyed Out" utilizzi API di terze parti, noi ("Aploide", "Eyed®","Eyed™") garantiamo che ogni dato
-            scambiato durante tali chiamate sia trattato in maniera riservata.</p>
+        <p>Sebbene "Eyed Out" utilizzi API di terze parti, noi ("Eyed®", "Eyed™") limitiamo i dati scambiati durante
+            tali chiamate allo stretto necessario. Tali dati sono trattati dalla terza parte interessata secondo la
+            propria informativa sulla privacy.</p>
     </div>
 
     <div class="section">
@@ -105,21 +120,6 @@
     </div>
 
     <div class="section">
-        <h1>Spettro by Eyed™</h1>
-        <p><b>Impegno per la Privacy:</b></p>
-        <p>Spettro è un assistente di codifica multi-agente basato su terminale. Per accedere alle funzionalità cloud di Spettro è necessaria l'autenticazione tramite Clerk. Durante questo processo, raccogliamo e conserviamo il tuo indirizzo email e generiamo una chiave API univoca per il tuo account.</p>
-
-        <p><b>Dati che Conserviamo:</b></p>
-        <p>Conserviamo il tuo indirizzo email (proveniente da Clerk), la tua chiave API e un registro dell'utilizzo di token LLM e dei relativi costi, utilizzati esclusivamente per applicare il tuo limite di spesa mensile.</p>
-
-        <p><b>Inoltro delle Richieste LLM:</b></p>
-        <p>I messaggi di chat inviati tramite Spettro vengono inoltrati a provider LLM di terze parti (come Alibaba Cloud, DeepSeek, Moonshot e altri) per generare risposte. Tali provider possono elaborare e conservare i tuoi messaggi in conformità alle proprie politiche sulla privacy. Ti invitiamo a consultare le rispettive informative.</p>
-
-        <p><b>Archiviazione Locale:</b></p>
-        <p>La cronologia delle conversazioni è archiviata esclusivamente sul tuo dispositivo locale e non viene mai trasmessa ai nostri server.</p>
-    </div>
-
-    <div class="section">
         <h1>Icone dei Siti Web nelle Applicazioni Eyed®</h1>
         <p><b>Fonte delle Icone:</b></p>
         <p>Le icone dei siti web utilizzate in "Eyed Pass" e "Eyed Out" sono ottenute dall'API pubblica di
@@ -137,40 +137,105 @@
     </div>
 
     <div class="section">
+        <h1>Spettro by Eyed™</h1>
+        <p>Spettro è un assistente di coding multi-agent basato su terminale. È composto da diversi elementi con
+            caratteristiche di privacy differenti: la <b>CLI di Spettro</b> che gira sul tuo computer, il <b>Backend di
+                Spettro</b> che gestiamo come servizio di inferenza LLM, l'applicazione web su <code>spettro.app</code>,
+            e le app desktop <b>Spettro-Desktop</b> (Linux e Windows) e <b>Spettro for macOS</b>.</p>
+
+        <p><b>Cosa raccogliamo e perché</b></p>
+        <p>Quando accedi alle funzionalità cloud di Spettro, trattiamo i seguenti dati personali:</p>
+        <ol>
+            <li><b>Indirizzo email</b> — ottenuto dal nostro provider di autenticazione al momento dell'accesso. Lo
+                usiamo come identificativo dell'account e per mostrare le schermate dell'account.</li>
+            <li><b>Stato dell'abbonamento</b> — il tuo piano attuale, lo stato di fatturazione e il periodo di
+                fatturazione. Viene aggiornato tramite il nostro provider di pagamenti.</li>
+            <li><b>Chiave API (solo hash)</b> — ogni chiave <code>ep_…</code> che rilasciamo è memorizzata
+                esclusivamente come hash; il testo in chiaro viene mostrato una sola volta a te e non viene mai
+                persistito da noi.</li>
+            <li><b>Riga di utilizzo per ogni inferenza</b> — per ogni chiamata LLM andata a buon fine registriamo
+                l'alias del modello, i conteggi di token, il costo calcolato dalla nostra tabella prezzi, l'id della
+                chiave API usata e il timestamp. Lo usiamo esclusivamente per applicare il tuo budget mensile di
+                crediti e per mostrare il tuo utilizzo.</li>
+        </ol>
+        <p>Non memorizziamo la cronologia delle tue chat, i tuoi prompt né le risposte del modello sui nostri
+            server.</p>
+
+        <p><b>Inoltro delle richieste LLM</b></p>
+        <p>I messaggi della chat e i risultati dei tool inviati tramite Spettro vengono inoltrati, integralmente, ai
+            provider dei modelli upstream per generare una risposta. L'insieme corrente di provider è:</p>
+        <ul>
+            <li><b>Spettro</b> (<code>SuperFast</code>, <code>SuperSmart</code>) — i nostri modelli, disciplinati
+                dalla presente informativa.</li>
+            <li><b>Alibaba Cloud</b> — predefinito per la maggior parte dei modelli; disciplinato dall'informativa
+                sulla privacy di Alibaba Cloud.</li>
+            <li><b>MiniMax</b> — disciplinato dall'informativa sulla privacy di MiniMax.</li>
+            <li><b>Crof AI</b> — disciplinato dall'informativa sulla privacy di Crof AI.</li>
+        </ul>
+        <p>Questi provider possono registrare, conservare o ulteriormente trattare i tuoi messaggi in conformità alle
+            proprie informative sulla privacy. Ti invitiamo a consultarle.</p>
+
+        <p><b>Archiviazione locale sul tuo dispositivo</b></p>
+        <p>La CLI di Spettro mantiene lo stato delle conversazioni, la memoria dell'agente e altri artefatti
+            esclusivamente sulla tua macchina. Le conversazioni, le chiavi API (conservate in forma crittografata),
+            la configurazione, i file di memoria, i comandi e le skill personalizzati e la cronologia dei checkpoint
+            rimangono sul tuo dispositivo. Nulla della conversazione lascia il tuo computer se non per le chiamate di
+            inferenza verso i provider upstream.</p>
+
+        <p><b>Spettro-Desktop (Linux & Windows)</b></p>
+        <p>L'app desktop è una sottile vista sopra il sottoprocesso della CLI. Non duplica i segreti. Memorizza
+            localmente le preferenze dell'utente, gli snapshot delle sessioni di chat e, se abiliti il relay LAN per
+            il telefono, i registri dei dispositivi associati. Il renderer del desktop non integra analytics né
+            tracker di terze parti.</p>
+
+        <p><b>Spettro for macOS</b></p>
+        <p>Spettro for macOS è un'applicazione desktop costruita interamente per macOS utilizzando Swift e SwiftUI.
+            Funziona allo stesso modo di Spettro-Desktop — è una vista sopra il sottoprocesso della CLI — ma, a
+            differenza di Spettro-Desktop, non è basata su Electron: è un'app nativa che sfrutta i framework nativi di
+            macOS. Memorizza localmente gli stessi tipi di dati di Spettro-Desktop (preferenze, snapshot delle
+            sessioni, registri dei dispositivi associati) nelle posizioni native di macOS. Non duplica i segreti e non
+            integra analytics né tracker di terze parti.</p>
+
+        <p><b>Cancellazione dell'account</b></p>
+        <p>Puoi richiedere la cancellazione del tuo account, inclusi email, collegamento all'abbonamento, chiavi API e
+            record di utilizzo, attraverso la dashboard <a href="https://spettro.app/dashboard"></a> o scrivendo a <a href="mailto:privacy@aploi.de">privacy@aploi.de</a>. Le richieste di
+            cancellazione vengono evase entro 30 giorni. Gli artefatti locali sulla tua macchina (chiavi
+            crittografate, cronologia delle conversazioni, memoria, checkpoint) non sono interessati dalla
+            cancellazione e restano sotto il tuo controllo.</p>
+    </div>
+
+    <div class="section">
         <h1>Trattamento dei Dati da Terze Parti</h1>
         <p>Sebbene le nostre integrazioni con servizi di terze parti migliorino le funzionalità, garantiamo che:</p>
         <ol>
             <li>Venga scambiato solo il minimo indispensabile di dati.</li>
-            <li>Le informazioni relative agli utenti non siano conservate da tali servizi oltre quanto strettamente
-                necessario per il loro funzionamento.</li>
+            <li>Vengano selezionati fornitori le cui informative limitano la conservazione delle informazioni degli
+                utenti a quanto strettamente necessario per il loro funzionamento.</li>
         </ol>
-        <p>Si invita, inoltre, gli utenti a consultare le informative sulla privacy dei fornitori terzi per ulteriori
+        <p>Si invitano, inoltre, gli utenti a consultare le informative sulla privacy dei fornitori terzi per ulteriori
             dettagli.</p>
     </div>
 
     <div class="section">
         <h1>Diritti degli Utenti e Considerazioni Legali</h1>
-        <p>Pur non conservando dati personali, rispettiamo i vostri diritti in conformità alle normative vigenti in
-            materia di privacy (quali <b>GDPR</b> o <b>CCPA</b>). Ciò include:</p>
-        <ol>
-            <li>Il diritto di essere informati su eventuali trattamenti incidentali dei dati.</li>
-            <li>Il diritto di richiedere chiarimenti su come la vostra privacy sia tutelata.</li>
-        </ol>
+        <p>Rispettiamo i tuoi diritti in conformità alle normative vigenti in materia di privacy (quali <b>GDPR</b> o
+            <b>CCPA</b>). Ciò include il diritto di accesso, rettifica, portabilità e cancellazione dei dati personali
+            che ti riguardano, nonché il diritto di opporti o limitarne il trattamento. Per esercitare questi diritti,
+            scrivi a <a href="mailto:privacy@aploi.de">privacy@aploi.de</a>.</p>
     </div>
 
     <div class="section">
         <h1>Aggiornamenti dell'Informativa</h1>
         <p>La presente Informativa sulla Privacy potrà essere aggiornata periodicamente per riflettere modifiche nelle
             nostre pratiche o nei requisiti legali.<br>
-            Gli utenti saranno informati di aggiornamenti significativi mediante la revisione della data <b>"Ultimo
-                aggiornamento"</b> posta alla fine del documento e la pubblicazione delle modifiche sul nostro sito
-            web.</p>
+            Gli aggiornamenti significativi saranno indicati dalla data <b>"Ultimo aggiornamento"</b> posta alla fine
+            del documento e annunciati sul nostro sito web.</p>
     </div>
 
     <div class="section">
         <h1>Informazioni di Contatto</h1>
         <p>Per qualsiasi domanda relativa alla presente Informativa sulla Privacy o alle nostre modalità di trattamento
-            dei dati, vi preghiamo di contattarci ai seguenti recapiti:</p>
+            dei dati, ti preghiamo di contattarci ai seguenti recapiti:</p>
         <ol>
             <li><b>Email:</b> <a href="mailto:privacy@aploi.de">privacy@aploi.de</a></li>
             <li><b>Informazioni Aggiuntive:</b> Per ulteriori dettagli sui diritti e le responsabilità degli utenti,
@@ -178,7 +243,7 @@
         </ol>
     </div>
 
-    <p><i><b>Ultimo aggiornamento: 17 Giugno, 2026</b></i></p>
+    <p><i><b>Ultimo aggiornamento: 4 agosto 2026</b></i></p>
 
 </body>
 

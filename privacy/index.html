@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy policy for Eyed® Softwares</title>
+    <title>Privacy Policy for Eyed® Softwares</title>
     <link rel="stylesheet" href="/assets/css/mini.css">
     <link rel="stylesheet" href="/assets/css/fonts.css">
 </head>
@@ -18,10 +18,12 @@
     <div class="section">
         <h1>Introduction</h1>
         <p>This document explains how our applications handle data and outlines our commitment to protecting user
-            privacy. Although our applications are designed not to store personal data, we provide this policy to ensure
-            transparency and trust.</p>
+            privacy. Our applications are designed to collect the minimum data needed to operate, and we provide this
+            policy to ensure transparency and trust.</p>
 
-        <p>The data controller is: <b>Carlo Esposito</b>.</p>
+        <p>The data controller is: <b>Carlo Esposito</b>, operating through Eyed® Softwares ("Eyed®", "Eyed™", "we",
+            "us", "our"). You can reach our privacy contact at
+            <a href="mailto:privacy@aploi.de">privacy@aploi.de</a>.</p>
     </div>
 
     <div class="section">
@@ -29,13 +31,19 @@
         <p><b>Personal Data:</b> Information that can be used to identify a person.</p>
         <p><b>Offline Application:</b> Software that operates without requiring a continuous internet connection.</p>
         <p><b>Third-Party APIs:</b> External services used to enhance the app's functionality (e.g., for loading website
-            icons).</p>
+            icons or routing LLM requests).</p>
+        <p><b>CLI:</b> Spettro's terminal-based multi-agent coding assistant, distributed under the GPL-3.0
+            open-source license.</p>
+        <p><b>Backend:</b> Our LLM inference service operated by Eyed® Softwares.</p>
+        <p><b>Spettro-Desktop:</b> The desktop application for Linux and Windows, distributed by Eyed®.</p>
+        <p><b>Spettro for macOS:</b> The native desktop application for macOS, built entirely in Swift and SwiftUI,
+            distributed by Eyed®.</p>
     </div>
 
     <div class="section">
         <h1>Scope and Data Processing Statement</h1>
-        <p>Our Eyed applications do not store any personal user data. The following applications and services fall under
-            this privacy policy:</p>
+        <p>Our Eyed applications are designed around data minimization. The following applications and services fall
+            under this privacy policy:</p>
         <ol>
             <li>Eyed Search</li>
             <li>Eyed Out</li>
@@ -44,24 +52,28 @@
             <li>Dark by Eyed™</li>
             <li>Dither by Eyed™</li>
             <li>Inferno by Eyed™</li>
-            <li>Spettro by Eyed™</li>
+            <li>Spettro by Eyed™ — including the Spettro CLI, the Spettro Backend, the Spettro web
+                application at <code>spettro.app</code>, Spettro-Desktop, and Spettro for macOS</li>
         </ol>
-
     </div>
 
     <div class="section">
         <h1>Temporary or Incidental Data</h1>
-        <p>Although our applications may temporarily process data during active use (e.g., session data in memory), no
-            data is stored, recorded, or transmitted beyond what is strictly necessary for proper operation.</p>
+        <p>Although our applications may temporarily process data during active use (e.g., session data in memory or
+            pending authentication sessions), no data is retained beyond what is strictly necessary for proper
+            operation.</p>
     </div>
 
     <div class="section">
         <h1>Cookies and Tracking Technologies</h1>
         <p>Our applications are designed with privacy in mind:</p>
         <ol>
-            <li><b>General Use:</b> No persistent cookies or tracking mechanisms are used.</li>
+            <li><b>General Use:</b> No persistent cookies, advertising identifiers, fingerprinting, or third-party
+                analytics are used in any of our applications, including all Spettro components.</li>
             <li><b>Eyed Pass:</b> This application uses the internet <b>solely</b> to load website icons and does not
                 employ tracking technologies to monitor user behavior.</li>
+            <li><b>spettro.app (web):</b> Uses Clerk for authentication. Cookies set by Clerk are functional (sign-in
+                session) and are governed by Clerk's privacy policy; please review it for the categories involved.</li>
         </ol>
     </div>
 
@@ -77,8 +89,9 @@
         </p>
 
         <p><b>Third-Party APIs:</b></p>
-        <p>Although "Eyed Out" uses third-party APIs, we ("Aploide", "Eyed®","Eyed™") ensure that any data exchanged
-            during such calls is handled confidentially.</p>
+        <p>Although "Eyed Out" uses third-party APIs, we ("Eyed®", "Eyed™") limit the data exchanged during such
+            calls to what is strictly necessary. Such data is processed by the relevant third party under its own
+            privacy policy.</p>
     </div>
 
     <div class="section">
@@ -103,34 +116,79 @@
     </div>
 
     <div class="section">
-        <h1>Spettro by Eyed™</h1>
-        <p><b>Privacy Commitment:</b></p>
-        <p>Spettro is a terminal-first multi-agent coding assistant. To access Spettro's cloud features, authentication via Clerk is required. During this process, we collect and store your email address and generate a unique API key for your account.</p>
-
-        <p><b>Data We Store:</b></p>
-        <p>We retain your email address (sourced from Clerk), your API key, and a record of your LLM token usage and associated costs, used exclusively to enforce your monthly spending budget.</p>
-
-        <p><b>LLM Request Forwarding:</b></p>
-        <p>Chat messages sent through Spettro are forwarded to upstream LLM providers (such as Alibaba Cloud, DeepSeek, Moonshot, and others) to generate responses. These providers may process and retain your messages in accordance with their own privacy policies. We encourage you to review their respective policies.</p>
-
-        <p><b>Local Storage:</b></p>
-        <p>Conversation history is stored exclusively on your local device and is never transmitted to our servers.</p>
-    </div>
-
-    <div class="section">
         <h1>Website Icons in Eyed® Applications</h1>
         <p><b>Icon Source:</b></p>
         <p>Website icons used in "Eyed Pass" and "Eyed Out" are obtained from DuckDuckGo's public API.<br>
-            For more details, please review DuckDuckGo’s privacy policy <a
+            For more details, please review DuckDuckGo's privacy policy <a
                 href="https://duckduckgo.com/duckduckgo-help-pages/privacy/favicons/">here</a>.</p>
     </div>
 
     <div class="section">
         <h1>Eyed Search</h1>
         <p><b>Data Processing:</b></p>
-        <p>Eyed Search is engineered for privacy. No user-specific data is logged or stored. To improve performance, we
-            retain a record of the <b>ANONYMIZED</b> query. This data is completely disconnected from any user and is
-            used exclusively to optimize search response times.</p>
+        <p>Eyed Search is engineered for privacy. We do not log personal data or IP addresses. The only information we
+            retain is the search query in <b>ANONYMIZED</b> form. This data is completely disconnected from any user
+            and is used exclusively to optimize search response times.</p>
+    </div>
+
+    <div class="section">
+        <h1>Spettro by Eyed™</h1>
+        <p>Spettro is a terminal-first multi-agent coding assistant. It is composed of several pieces with different
+            privacy characteristics: the <b>Spettro CLI</b> that runs on your machine, the <b>Spettro Backend</b> that
+            we operate as an LLM inference service, the web application at <code>spettro.app</code>, and the desktop
+            apps <b>Spettro-Desktop</b> (Linux and Windows) and <b>Spettro for macOS</b>.</p>
+
+        <p><b>What we collect and why</b></p>
+        <p>When you sign in to Spettro's cloud features, we process the following personal data:</p>
+        <ol>
+            <li><b>Email address</b> — obtained from our authentication provider at the moment you complete sign-in.
+                We use it as the account identifier and to render account screens.</li>
+            <li><b>Subscription state</b> — your current plan, billing status, and billing period. This is updated
+                via our payment provider.</li>
+            <li><b>API key (hash only)</b> — every <code>ep_…</code> key we issue is stored exclusively as a hash;
+                the plaintext is shown to you once and never persisted by us.</li>
+            <li><b>Per-inference usage row</b> — for each successful LLM call, we record the model alias, token
+                counts, the cost computed from our pricing table, the API key id used, and the timestamp. We use this
+                exclusively to enforce your monthly credit budget and to display your usage.</li>
+        </ol>
+        <p>We do <b>not</b> store your chat history, your prompts, or the LLM's responses on our servers.</p>
+
+        <p><b>LLM request forwarding</b></p>
+        <p>Chat messages and tool results sent through Spettro are forwarded, verbatim, to upstream model providers to
+            generate a response. The current set of providers is:</p>
+        <ul>
+            <li><b>Spettro</b> (<code>SuperFast</code>, <code>SuperSmart</code>) — our models, governed by this
+                policy.</li>
+            <li><b>Alibaba Cloud</b> — default for most models; governed by Alibaba Cloud's privacy policy.</li>
+            <li><b>MiniMax</b> — governed by MiniMax's privacy policy.</li>
+            <li><b>Crof AI</b> — governed by Crof AI's privacy policy.</li>
+        </ul>
+        <p>These providers may log, retain, or further process your messages in accordance with their own privacy
+            policies. We encourage you to review them.</p>
+
+        <p><b>Local storage on your device</b></p>
+        <p>The Spettro CLI keeps conversation state, agent memory, and other artifacts strictly on your machine.
+            Conversations, API keys (stored in encrypted form), configuration, memory files, custom commands and
+            skills, and checkpoint history remain on your device. Nothing about the conversation leaves your computer
+            except for inference calls to upstream providers.</p>
+
+        <p><b>Spettro-Desktop (Linux & Windows)</b></p>
+        <p>The desktop app is a thin view over the CLI subprocess. It does not duplicate secrets. It stores user
+            preferences, chat-session snapshots, and — if you enable the LAN phone relay — records of paired devices
+            locally. The desktop renderer does not embed analytics or third-party trackers.</p>
+
+        <p><b>Spettro for macOS</b></p>
+        <p>Spettro for macOS is a desktop application built entirely for macOS using Swift and SwiftUI. It functions
+            the same as Spettro-Desktop — it is a view over the CLI subprocess — but, unlike Spettro-Desktop, it is
+            not based on Electron: it is a native app that leverages macOS-native frameworks. It stores the same types
+            of data as Spettro-Desktop (preferences, chat-session snapshots, paired-device records) in macOS-native
+            locations. It does not duplicate secrets and does not embed analytics or third-party trackers.</p>
+
+        <p><b>Account deletion</b></p>
+        <p>You can request deletion of your account, including your email, subscription linkage, API keys, and usage
+            records, by using the dashboard <a href="https://spettro.app/dashboard">https://spettro.app/dashboard</a> or writing to <a href="mailto:privacy@aploi.de">privacy@aploi.de</a>. We action deletion
+            requests within 30 days. Local artifacts on your machine (encrypted keys, conversation history, memory,
+            checkpoints) are unaffected and remain under your control.</p>
     </div>
 
     <div class="section">
@@ -138,28 +196,26 @@
         <p>Although our integrations with third-party services enhance functionality, we ensure that:</p>
         <ol>
             <li>Only the minimum necessary data is exchanged.</li>
-            <li>User information is not retained by such services beyond what is strictly necessary for their operation.
-            </li>
+            <li>We select providers whose policies limit the retention of user information to what is strictly
+                necessary for their operation.</li>
         </ol>
         <p>Users are also encouraged to review the privacy policies of third-party providers for additional details.</p>
     </div>
 
     <div class="section">
         <h1>User Rights and Legal Considerations</h1>
-        <p>Even though we do not store personal data, we respect your rights in accordance with applicable privacy
-            regulations (such as <b>GDPR</b> or <b>CCPA</b>). This includes:</p>
-        <ol>
-            <li>The right to be informed about any incidental data processing.</li>
-            <li>The right to request clarifications on how your privacy is protected.</li>
-        </ol>
+        <p>We respect your rights in accordance with applicable privacy regulations (such as <b>GDPR</b> or
+            <b>CCPA</b>). This includes the right to access, correct, port, and delete personal data we hold about you,
+            and to object to or restrict its processing. To exercise these rights, write to
+            <a href="mailto:privacy@aploi.de">privacy@aploi.de</a>.</p>
     </div>
 
     <div class="section">
         <h1>Privacy Policy Updates</h1>
         <p>This Privacy Policy may be updated periodically to reflect changes in our practices or legal
             requirements.<br>
-            Users will be notified of significant updates by reviewing the <b>"Last Updated"</b> date at the end of the
-            document and through updates on our website.</p>
+            Significant updates are reflected in the <b>"Last Updated"</b> date at the end of this document and are
+            announced on our website.</p>
     </div>
 
     <div class="section">
@@ -173,12 +229,13 @@
     </div>
 
     <div class="section">
-        <p><b>Disclaimer:</b> This translation is provided for informational purposes only. Translation errors may
-            occur, particularly with respect to legal terminology, and this document should not be relied upon as a
-            substitute for <a href="/privacy/ita/">Informativa sulla Privacy</a>.</p>
+        <p><b>Disclaimer:</b> This English version is a translation provided for informational purposes only.
+            Translation errors may occur, particularly with respect to legal terminology. In the event of any conflict
+            or ambiguity, the authoritative Italian version, the <a href="/privacy/ita/">Informativa sulla
+                Privacy</a>, shall prevail.</p>
     </div>
 
-    <p><i><b>Last Updated: 17 June, 2026</b></i></p>
+    <p><i><b>Last Updated: 4 August 2026</b></i></p>
 
 </body>
 
